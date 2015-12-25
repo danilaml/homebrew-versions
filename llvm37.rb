@@ -270,6 +270,7 @@ class Llvm37 < Formula
 
   test do
     system "#{bin}/llvm-config-#{ver}", "--version"
+    assert_no_match /PATH\)n/, (lib/"llvm-3.7/share/llvm/cmake/LLVMConfig.cmake").read
   end
 end
 
